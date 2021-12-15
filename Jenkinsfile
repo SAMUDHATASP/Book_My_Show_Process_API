@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Deploy Development') {
       steps {
-            bat "mvn clean package deploy -DmuleVersion=4.4.0 -Dusername=SPSAMUDHATA -Dpassword=BookMyShow@1 -DapplicationName=bookmyshow-process-api -Denvironment=Sandbox -Dworkers=1 -DworkerType=Micro -DmuleDeploy"
+            bat "mvn package deploy -DmuleVersion=4.4.0 -Dusername=SPSAMUDHATA -Dpassword=BookMyShow@1 -DapplicationName=bookmyshow-process-api-CICD -Denvironment=Sandbox -Dworkers=1 -DworkerType=Micro -DmuleDeploy"
             echo "deploy success"      
       }
     }
